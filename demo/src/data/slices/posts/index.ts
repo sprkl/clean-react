@@ -4,11 +4,11 @@ import * as actions from "./actions";
 
 // Models
 
-class UsersState {
+class PostsState {
     posts: Array<Post> = [];
 }
 
-const usersReducer = (state = new UsersState(), action: any): UsersState => {
+const postsReducer = (state = new PostsState(), action: any): PostsState => {
     switch (action.type) {
         case actions.SET_POSTS:
             return { ...state, posts: action.value };
@@ -18,4 +18,4 @@ const usersReducer = (state = new UsersState(), action: any): UsersState => {
     }
 };
 
-export default usersReducer;
+export default postsReducer;
